@@ -130,7 +130,6 @@ const allValidLucideIcons = Object.keys(LucideIcons)
    }
   const ReactIcons = {
     ...ReactAi,
-    ...ReactFa,
     ...ReactGi,
     ...ReactMd,
     ...ReactTfi,
