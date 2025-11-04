@@ -47,6 +47,7 @@ import * as ReactTi from "react-icons/ti"
 import * as ReactIm from "react-icons/im"
 import * as HealthIcons from "healthicons-react";
 import * as ReactGr from "react-icons/gr"
+import * as ReactLia from "react-icons/lia"
 
 
 import { motion } from "framer-motion";
@@ -187,7 +188,8 @@ const libraries = {
   TypIcons:ReactTi,
   IcoMoonIcons:ReactIm,
   HealthIcons,
-  GrommetIcons:ReactGr
+  GrommetIcons:ReactGr,
+  LineAwesomeIcons:ReactGr
 
   // Add more mappings if necessary
 };
@@ -386,6 +388,10 @@ export default function AllIconsPage() {
         return Icon ? (
           <Icon theme="outline" size={size} fill={color} />
         ) : null;
+      }
+       case "GrommetIcons": {
+        const Icon = ReactLia[name];
+        return Icon ? <Icon size={size} color={color} /> : null;
       }
        case "BootStrap": {
         const Icon = ReactBs[name];
