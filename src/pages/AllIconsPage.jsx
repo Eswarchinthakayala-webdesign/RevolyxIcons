@@ -40,7 +40,7 @@ import data from "@emoji-mart/data";
 // import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 // import * as Evergreen from "evergreen-ui";
 // import * as GrommetIcons from "grommet-icons";
-// import * as Web3Icons from "@web3icons/react";
+import * as Web3Icons from "@web3icons/react";
 // import * as PayIcons from "react-pay-icons";
 // import * as IconPark from "@icon-park/react";
 // import * as BoxIcons from "react-icons/bi";
@@ -165,14 +165,14 @@ const emojiMartData=Object.fromEntries(
 //   })
 // );
 
-// const Web3IconsList = Object.fromEntries(
-//   Object.entries(Web3Icons).filter(([name, Comp]) => {
-//     return (
-//       typeof Comp === "function" ||
-//       (typeof Comp === "object" && Comp.$$typeof)
-//     );
-//   })
-// );
+const Web3IconsList = Object.fromEntries(
+  Object.entries(Web3Icons).filter(([name, Comp]) => {
+    return (
+      typeof Comp === "function" ||
+      (typeof Comp === "object" && Comp.$$typeof)
+    );
+  })
+);
 
 
 // const PayIconsList = Object.fromEntries(
