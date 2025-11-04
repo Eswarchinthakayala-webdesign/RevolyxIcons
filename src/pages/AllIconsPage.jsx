@@ -43,9 +43,9 @@ import data from "@emoji-mart/data";
 // import * as Web3Icons from "@web3icons/react";
 import * as PayIcons from "react-pay-icons";
 import * as IconPark from "@icon-park/react";
-// import * as BoxIcons from "react-icons/bi";
+import * as BoxIcons from "react-icons/bi";
 // import * as IconoirIcons from "iconoir-react";
-// import * as ReactBs from "react-icons/bs"
+import * as ReactBs from "react-icons/bs"
 import * as ReactCi from "react-icons/ci"
 import * as ReactCg from "react-icons/cg"
 import * as ReactDi from "react-icons/di"
@@ -55,7 +55,7 @@ import * as ReactGo from "react-icons/go"
 import * as ReactWi from "react-icons/wi"
 import * as ReactVsc from "react-icons/vsc"
 import * as ReactTi from "react-icons/ti"
-// import * as ReactIm from "react-icons/im"
+import * as ReactIm from "react-icons/im"
 import * as HealthIcons from "healthicons-react";
 
 import { motion } from "framer-motion";
@@ -223,9 +223,9 @@ const libraries = {
 //   Web3: Web3IconsList,
   PayIcons: PayIconsList,
   IconPark: IconParkList,
-  // Boxicons: BoxIcons,
+  Boxicons: BoxIcons,
   // Iconoir: IconoirIcons,
-  // BootStrap:ReactBs,
+  BootStrap:ReactBs,
   Circumicons:ReactCi,
   CSSgg:ReactCg,
   Devicons:ReactDi,
@@ -235,7 +235,7 @@ const libraries = {
   WeatherIcons:ReactWi,
   VSstudioIcons:ReactVsc,
   TypIcons:ReactTi,
-  // IcoMoonIcons:ReactIm,
+  IcoMoonIcons:ReactIm,
   HealthIcons,
 
   // Add more mappings if necessary
