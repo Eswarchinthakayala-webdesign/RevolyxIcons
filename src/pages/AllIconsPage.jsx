@@ -40,9 +40,9 @@ import data from "@emoji-mart/data";
 // import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 // import * as Evergreen from "evergreen-ui";
 // import * as GrommetIcons from "grommet-icons";
-import * as Web3Icons from "@web3icons/react";
-import * as PayIcons from "react-pay-icons";
-import * as IconPark from "@icon-park/react";
+// import * as Web3Icons from "@web3icons/react";
+// import * as PayIcons from "react-pay-icons";
+// import * as IconPark from "@icon-park/react";
 // import * as BoxIcons from "react-icons/bi";
 // import * as IconoirIcons from "iconoir-react";
 // import * as ReactBs from "react-icons/bs"
@@ -220,9 +220,9 @@ const libraries = {
 //   Blueprint: Object.fromEntries(blueprintIconNames.map((n) => [n, n])),
 //   Evergreen: EvergreenIcons,
 //   Grommet: GrommetIconsList,
-  Web3: Web3IconsList,
-  PayIcons: PayIconsList,
-  IconPark: IconParkList,
+//   Web3: Web3IconsList,
+//   PayIcons: PayIconsList,
+//   IconPark: IconParkList,
   // Boxicons: BoxIcons,
   // Iconoir: IconoirIcons,
   // BootStrap:ReactBs,
