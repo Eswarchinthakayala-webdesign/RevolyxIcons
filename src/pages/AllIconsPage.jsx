@@ -17,7 +17,6 @@ import * as TablerIcons from "react-icons/tb";
 import * as SimpleIcons from "react-icons/si";
 import * as EvaIcons from "eva-icons";
 import * as ReactAi from "react-icons/ai";
-import * as ReactFa from "react-icons/fa";
 import * as ReactGi from "react-icons/gi";
 import * as ReactMd from "react-icons/md";
 import * as ReactTfi from "react-icons/tfi"
@@ -203,7 +202,7 @@ const libraries = {
   FontAwesomeBrands: FaBrands,
   Remix: RemixIcons,
   Tabler: TablerIcons,
-  ReactIcons: { ...ReactAi, ...ReactFa, ...ReactGi, ...ReactMd,...ReactTfi },
+  ReactIcons: { ...ReactAi, ...ReactGi, ...ReactMd,...ReactTfi },
   MaterialUI: MuiIcons,
 //   AntDesign: AntdIcons,
   Fluent: FluentIconsFiltered,
