@@ -54,7 +54,8 @@
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.16",
-    "twemoji": "^14.0.2"
+    "twemoji": "^14.0.2",
+    "zondicons": "^1.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

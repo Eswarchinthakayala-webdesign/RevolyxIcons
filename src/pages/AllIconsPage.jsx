@@ -26,8 +26,8 @@ import * as FluentIcons from "@fluentui/react-icons";
 // import * as Octicons from "@primer/octicons-react";
 import * as CoreUIIcons from "@coreui/icons-react";
 import * as CIcon from "@coreui/icons";
-// import * as Zondicons from "zondicons";
-// import allTeenyIcons from "../components/TeenyIconsGallery";
+import * as Zondicons from "zondicons";
+import allTeenyIcons from "../components/TeenyIconsGallery";
 import "foundation-icons/foundation-icons.css";
 import { foundationIconList } from "../../data/FoundationList";
 import twemoji from "twemoji";
@@ -142,38 +142,6 @@ const emojiList = emojiData.map((e) => ({
 })); 
 const emojiMartData=Object.fromEntries(
      Object.values(data.emojis).map((e) => [e.skins[0].native,true]))
-// const primeIconList = [
-//   ...primeIconsCSS.matchAll(/\.pi-([a-z0-9-]+):before/g),
-// ].map((m) => `pi pi-${m[1]}`);
-// const blueprintIconNames = Object.values(IconNames);
-
-// const EvergreenIcons = Object.fromEntries(
-//   Object.entries(Evergreen)
-//     .filter(([name]) => name.endsWith("Icon"))
-//     .map(([name, Comp]) => [name, Comp])
-// );
-
-
-// const GrommetIconsList = Object.fromEntries(
-//   Object.entries(GrommetIcons).filter(([name, Comp]) => {
-//     return (
-//       typeof Comp === "object" &&
-//       Comp.$$typeof && // only React components
-//       name !== "Blank" &&
-//       name !== "extendDefaultTheme"
-//     );
-//   })
-// );
-
-// const Web3IconsList = Object.fromEntries(
-//   Object.entries(Web3Icons).filter(([name, Comp]) => {
-//     return (
-//       typeof Comp === "function" ||
-//       (typeof Comp === "object" && Comp.$$typeof)
-//     );
-//   })
-// );
-
 
 const PayIconsList = Object.fromEntries(
   Object.entries(PayIcons).filter(([name, Comp]) => {
@@ -209,9 +177,9 @@ const libraries = {
   CoreUI: CIcon, 
   Simple: SimpleIcons,
   Eva: EvaIcons,
-//   Zondicons: Zondicons,
+  Zondicons: Zondicons,
   Carbon: CarbonIcons,
-//   TeenyIcons: Object.fromEntries(allTeenyIcons.map((i) => [i.name, i.src])),
+  TeenyIcons: Object.fromEntries(allTeenyIcons.map((i) => [i.name, i.src])),
   Foundation: Object.fromEntries(foundationIconList.map((n) => [n, true])),
   Twemoji: Object.fromEntries(emojiList.map((e) => [e.name, e.char])),
   NotoEmoji: Object.fromEntries(emojiList.map((e) => [e.name, e.char])),
@@ -266,25 +234,25 @@ export default function AllIconsPage() {
 
 
 
-//   useEffect(() => {
-//     const loadZondicons = async () => {
-//       const entries = await Promise.all(
-//         Object.entries(Zondicons).map(async ([name, loader]) => {
-//           if (typeof loader === "function") {
-//             try {
-//               const mod = await loader();
-//               return [name, mod.default]; // SVG file URL
-//             } catch {
-//               return [name, null];
-//             }
-//           }
-//           return [name, null];
-//         })
-//       );
-//       setZondiconSvgs(Object.fromEntries(entries));
-//     };
-//     loadZondicons();
-//   }, []);
+  useEffect(() => {
+    const loadZondicons = async () => {
+      const entries = await Promise.all(
+        Object.entries(Zondicons).map(async ([name, loader]) => {
+          if (typeof loader === "function") {
+            try {
+              const mod = await loader();
+              return [name, mod.default]; // SVG file URL
+            } catch {
+              return [name, null];
+            }
+          }
+          return [name, null];
+        })
+      );
+      setZondiconSvgs(Object.fromEntries(entries));
+    };
+    loadZondicons();
+  }, []);
   const ITEMS_PER_PAGE = 120;
   const iconNames = useMemo(() => getIconListForLib(activeLib), [activeLib]);
 
