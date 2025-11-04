@@ -23,7 +23,6 @@ import * as ReactTfi from "react-icons/tfi"
 import * as MuiIcons from "@mui/icons-material";
 import * as CarbonIcons from "@carbon/icons-react";
 import * as FluentIcons from "@fluentui/react-icons";
-// import * as Octicons from "@primer/octicons-react";
 import * as CoreUIIcons from "@coreui/icons-react";
 import * as CIcon from "@coreui/icons";
 import * as Zondicons from "zondicons";
@@ -33,30 +32,22 @@ import { foundationIconList } from "../../data/FoundationList";
 import twemoji from "twemoji";
 import emojiData from "emoji.json";
 import data from "@emoji-mart/data";
-// import primeIconsCSS from "primeicons/primeicons.css?inline";
-// import "primeicons/primeicons.css";
-// import { Icon as BlueprintIcon } from "@blueprintjs/core";
-// import { IconNames } from "@blueprintjs/icons";
-// import "@blueprintjs/icons/lib/css/blueprint-icons.css";
-// import * as Evergreen from "evergreen-ui";
-// import * as GrommetIcons from "grommet-icons";
-// import * as Web3Icons from "@web3icons/react";
 import * as PayIcons from "react-pay-icons";
 import * as IconPark from "@icon-park/react";
 import * as BoxIcons from "react-icons/bi";
-// import * as IconoirIcons from "iconoir-react";
 import * as ReactBs from "react-icons/bs"
 import * as ReactCi from "react-icons/ci"
 import * as ReactCg from "react-icons/cg"
 import * as ReactDi from "react-icons/di"
 import * as ReactFc from "react-icons/fc"
-// import * as ReactFa6 from "react-icons/fa6"
 import * as ReactGo from "react-icons/go"
 import * as ReactWi from "react-icons/wi"
 import * as ReactVsc from "react-icons/vsc"
 import * as ReactTi from "react-icons/ti"
 import * as ReactIm from "react-icons/im"
 import * as HealthIcons from "healthicons-react";
+import * as ReactGr from "react-icons/gr"
+
 
 import { motion } from "framer-motion";
 import clsx from "clsx";
@@ -171,9 +162,7 @@ const libraries = {
   Tabler: TablerIcons,
   ReactIcons: { ...ReactAi, ...ReactGi, ...ReactMd,...ReactTfi },
   MaterialUI: MuiIcons,
-//   AntDesign: AntdIcons,
   Fluent: FluentIconsFiltered,
-//   Octicons: Octicons,
   CoreUI: CIcon, 
   Simple: SimpleIcons,
   Eva: EvaIcons,
@@ -184,27 +173,21 @@ const libraries = {
   Twemoji: Object.fromEntries(emojiList.map((e) => [e.name, e.char])),
   NotoEmoji: Object.fromEntries(emojiList.map((e) => [e.name, e.char])),
   EmojiMart: emojiMartData,
-//   PrimeIcons: Object.fromEntries(primeIconList.map((n) => [n, n])),
-//   Blueprint: Object.fromEntries(blueprintIconNames.map((n) => [n, n])),
-//   Evergreen: EvergreenIcons,
-//   Grommet: GrommetIconsList,
-//   Web3: Web3IconsList,
   PayIcons: PayIconsList,
   IconPark: IconParkList,
   Boxicons: BoxIcons,
-  // Iconoir: IconoirIcons,
   BootStrap:ReactBs,
   Circumicons:ReactCi,
   CSSgg:ReactCg,
   Devicons:ReactDi,
   FlatColor:ReactFc,
-  // FontAwesome6:ReactFa6,
   GithubIcons:ReactGo,
   WeatherIcons:ReactWi,
   VSstudioIcons:ReactVsc,
   TypIcons:ReactTi,
   IcoMoonIcons:ReactIm,
   HealthIcons,
+  GrommetIcons:ReactGr
 
   // Add more mappings if necessary
 };
@@ -371,11 +354,9 @@ export default function AllIconsPage() {
         const Icon = ReactCg[name];
         return Icon ? <Icon size={size} color={color} /> : null;
       }
-      case "Grommet": {
-        const Icon = libraries[lib][name];
-        if (!Icon) return null;
-        // Grommet requires size as string (like "24px")
-        return <Icon size={`${size}px`} color={color} />;
+      case "GrommetIcons": {
+        const Icon = ReactGr[name];
+        return Icon ? <Icon size={size} color={color} /> : null;
       }
       case "PayIcons": {
         const Icon = PayIconsList[name];
