@@ -389,7 +389,7 @@ export default function AllIconsPage() {
           <Icon theme="outline" size={size} fill={color} />
         ) : null;
       }
-       case "GrommetIcons": {
+       case "LineAwesomeIcons": {
         const Icon = ReactLia[name];
         return Icon ? <Icon size={size} color={color} /> : null;
       }
