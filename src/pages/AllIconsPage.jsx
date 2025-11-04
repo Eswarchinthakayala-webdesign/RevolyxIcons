@@ -42,7 +42,7 @@ import data from "@emoji-mart/data";
 // import * as GrommetIcons from "grommet-icons";
 // import * as Web3Icons from "@web3icons/react";
 import * as PayIcons from "react-pay-icons";
-// import * as IconPark from "@icon-park/react";
+import * as IconPark from "@icon-park/react";
 // import * as BoxIcons from "react-icons/bi";
 // import * as IconoirIcons from "iconoir-react";
 // import * as ReactBs from "react-icons/bs"
@@ -183,11 +183,11 @@ const PayIconsList = Object.fromEntries(
     );
   })
 );
-// const IconParkList = Object.fromEntries(
-//   Object.entries(IconPark).filter(([name, Comp]) =>
-//     typeof Comp === "function"
-//   )
-// );
+const IconParkList = Object.fromEntries(
+  Object.entries(IconPark).filter(([name, Comp]) =>
+    typeof Comp === "function"
+  )
+);
 
 
 const libraries = {
@@ -222,7 +222,7 @@ const libraries = {
 //   Grommet: GrommetIconsList,
 //   Web3: Web3IconsList,
   PayIcons: PayIconsList,
-//   IconPark: IconParkList,
+  IconPark: IconParkList,
   // Boxicons: BoxIcons,
   // Iconoir: IconoirIcons,
   // BootStrap:ReactBs,
