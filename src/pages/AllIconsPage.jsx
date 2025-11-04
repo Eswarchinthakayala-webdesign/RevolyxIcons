@@ -165,29 +165,29 @@ const emojiMartData=Object.fromEntries(
 //   })
 // );
 
-const Web3IconsList = Object.fromEntries(
-  Object.entries(Web3Icons).filter(([name, Comp]) => {
-    return (
-      typeof Comp === "function" ||
-      (typeof Comp === "object" && Comp.$$typeof)
-    );
-  })
-);
+// const Web3IconsList = Object.fromEntries(
+//   Object.entries(Web3Icons).filter(([name, Comp]) => {
+//     return (
+//       typeof Comp === "function" ||
+//       (typeof Comp === "object" && Comp.$$typeof)
+//     );
+//   })
+// );
 
 
-const PayIconsList = Object.fromEntries(
-  Object.entries(PayIcons).filter(([name, Comp]) => {
-    return (
-      typeof Comp === "function" ||
-      (typeof Comp === "object" && Comp.$$typeof)
-    );
-  })
-);
-const IconParkList = Object.fromEntries(
-  Object.entries(IconPark).filter(([name, Comp]) =>
-    typeof Comp === "function"
-  )
-);
+// const PayIconsList = Object.fromEntries(
+//   Object.entries(PayIcons).filter(([name, Comp]) => {
+//     return (
+//       typeof Comp === "function" ||
+//       (typeof Comp === "object" && Comp.$$typeof)
+//     );
+//   })
+// );
+// const IconParkList = Object.fromEntries(
+//   Object.entries(IconPark).filter(([name, Comp]) =>
+//     typeof Comp === "function"
+//   )
+// );
 
 
 const libraries = {
