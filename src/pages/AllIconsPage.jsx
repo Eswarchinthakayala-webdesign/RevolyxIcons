@@ -48,6 +48,8 @@ import * as ReactIm from "react-icons/im"
 import * as HealthIcons from "healthicons-react";
 import * as ReactGr from "react-icons/gr"
 import * as ReactLia from "react-icons/lia"
+import * as ReactIo from "react-icons/io"
+import * as ReactIo2 from "react-icons/io5"
 
 
 import { motion } from "framer-motion";
@@ -126,6 +128,10 @@ const allValidLucideIcons = Object.keys(LucideIcons)
     ...ReactMd,
     ...ReactTfi,
   };
+  const IonIcons={
+  ...ReactIo,
+  ...ReactIo2
+}
 const validFluentIcons = Object.keys(FluentIcons).filter((n) => /^[A-Z]/.test(n));
 const FluentIconsFiltered = Object.fromEntries(validFluentIcons.map((n) => [n, FluentIcons[n]]));
 const emojiList = emojiData.map((e) => ({
@@ -189,7 +195,8 @@ const libraries = {
   IcoMoonIcons:ReactIm,
   HealthIcons,
   GrommetIcons:ReactGr,
-  LineAwesomeIcons:ReactGr
+  LineAwesomeIcons:ReactGr,
+  IonIcons:IonIcons
 
   // Add more mappings if necessary
 };
@@ -354,6 +361,10 @@ export default function AllIconsPage() {
       }
        case "CSSgg": {
         const Icon = ReactCg[name];
+        return Icon ? <Icon size={size} color={color} /> : null;
+      }
+       case "IonIcons": {
+        const Icon = IonIcons[name];
         return Icon ? <Icon size={size} color={color} /> : null;
       }
       case "GrommetIcons": {
