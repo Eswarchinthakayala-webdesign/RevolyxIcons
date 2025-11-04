@@ -40,8 +40,8 @@ import data from "@emoji-mart/data";
 // import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 // import * as Evergreen from "evergreen-ui";
 // import * as GrommetIcons from "grommet-icons";
-import * as Web3Icons from "@web3icons/react";
-// import * as PayIcons from "react-pay-icons";
+// import * as Web3Icons from "@web3icons/react";
+import * as PayIcons from "react-pay-icons";
 // import * as IconPark from "@icon-park/react";
 // import * as BoxIcons from "react-icons/bi";
 // import * as IconoirIcons from "iconoir-react";
@@ -49,12 +49,12 @@ import * as Web3Icons from "@web3icons/react";
 // import * as ReactCi from "react-icons/ci"
 // import * as ReactCg from "react-icons/cg"
 // import * as ReactDi from "react-icons/di"
-// import * as ReactFc from "react-icons/fc"
+import * as ReactFc from "react-icons/fc"
 // import * as ReactFa6 from "react-icons/fa6"
 // import * as ReactGo from "react-icons/go"
 import * as ReactWi from "react-icons/wi"
-// import * as ReactVsc from "react-icons/vsc"
-// import * as ReactTi from "react-icons/ti"
+import * as ReactVsc from "react-icons/vsc"
+import * as ReactTi from "react-icons/ti"
 // import * as ReactIm from "react-icons/im"
 import * as HealthIcons from "healthicons-react";
 
@@ -165,24 +165,24 @@ const emojiMartData=Object.fromEntries(
 //   })
 // );
 
-const Web3IconsList = Object.fromEntries(
-  Object.entries(Web3Icons).filter(([name, Comp]) => {
-    return (
-      typeof Comp === "function" ||
-      (typeof Comp === "object" && Comp.$$typeof)
-    );
-  })
-);
-
-
-// const PayIconsList = Object.fromEntries(
-//   Object.entries(PayIcons).filter(([name, Comp]) => {
+// const Web3IconsList = Object.fromEntries(
+//   Object.entries(Web3Icons).filter(([name, Comp]) => {
 //     return (
 //       typeof Comp === "function" ||
 //       (typeof Comp === "object" && Comp.$$typeof)
 //     );
 //   })
 // );
+
+
+const PayIconsList = Object.fromEntries(
+  Object.entries(PayIcons).filter(([name, Comp]) => {
+    return (
+      typeof Comp === "function" ||
+      (typeof Comp === "object" && Comp.$$typeof)
+    );
+  })
+);
 // const IconParkList = Object.fromEntries(
 //   Object.entries(IconPark).filter(([name, Comp]) =>
 //     typeof Comp === "function"
@@ -221,7 +221,7 @@ const libraries = {
 //   Evergreen: EvergreenIcons,
 //   Grommet: GrommetIconsList,
 //   Web3: Web3IconsList,
-//   PayIcons: PayIconsList,
+  PayIcons: PayIconsList,
 //   IconPark: IconParkList,
   // Boxicons: BoxIcons,
   // Iconoir: IconoirIcons,
@@ -229,12 +229,12 @@ const libraries = {
   // Circumicons:ReactCi,
   // CSSgg:ReactCg,
   // Devicons:ReactDi,
-  // FlatColor:ReactFc,
+  FlatColor:ReactFc,
   // FontAwesome6:ReactFa6,
   // GithubIcons:ReactGo,
   WeatherIcons:ReactWi,
-  // VSstudioIcons:ReactVsc,
-  // TypIcons:ReactTi,
+  VSstudioIcons:ReactVsc,
+  TypIcons:ReactTi,
   // IcoMoonIcons:ReactIm,
   HealthIcons,
 
