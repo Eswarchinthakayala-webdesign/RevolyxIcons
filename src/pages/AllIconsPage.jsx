@@ -46,12 +46,13 @@ import * as PayIcons from "react-pay-icons";
 import * as IconPark from "@icon-park/react";
 // import * as BoxIcons from "react-icons/bi";
 // import * as IconoirIcons from "iconoir-react";
-import * as ReactBs from "react-icons/bs"
-import * as ReactCi from "react-icons/ci"
-import * as ReactCg from "react-icons/cg"
-import * as ReactDi from "react-icons/di"
-import * as ReactFc from "react-icons/fc"
-import * as ReactGo from "react-icons/go"
+// import * as ReactBs from "react-icons/bs"
+// import * as ReactCi from "react-icons/ci"
+// import * as ReactCg from "react-icons/cg"
+// import * as ReactDi from "react-icons/di"
+// import * as ReactFc from "react-icons/fc"
+// import * as ReactFa6 from "react-icons/fa6"
+// import * as ReactGo from "react-icons/go"
 import * as ReactWi from "react-icons/wi"
 // import * as ReactVsc from "react-icons/vsc"
 // import * as ReactTi from "react-icons/ti"
@@ -224,14 +225,15 @@ const libraries = {
   Web3: Web3IconsList,
   PayIcons: PayIconsList,
   IconPark: IconParkList,
-//   Boxicons: BoxIcons,
-//   Iconoir: IconoirIcons,
-  BootStrap:ReactBs,
-  Circumicons:ReactCi,
-  CSSgg:ReactCg,
-  Devicons:ReactDi,
-  FlatColor:ReactFc,
-  GithubIcons:ReactGo,
+  // Boxicons: BoxIcons,
+  // Iconoir: IconoirIcons,
+  // BootStrap:ReactBs,
+  // Circumicons:ReactCi,
+  // CSSgg:ReactCg,
+  // Devicons:ReactDi,
+  // FlatColor:ReactFc,
+  // FontAwesome6:ReactFa6,
+  // GithubIcons:ReactGo,
   WeatherIcons:ReactWi,
   // VSstudioIcons:ReactVsc,
   // TypIcons:ReactTi,
