@@ -50,7 +50,7 @@ import * as ReactGr from "react-icons/gr"
 import * as ReactLia from "react-icons/lia"
 import * as ReactIo from "react-icons/io"
 import * as ReactIo2 from "react-icons/io5"
-
+import * as ReactSl from "react-icons/sl"
 
 import { motion } from "framer-motion";
 import clsx from "clsx";
@@ -195,8 +195,10 @@ const libraries = {
   IcoMoonIcons:ReactIm,
   HealthIcons,
   GrommetIcons:ReactGr,
-  LineAwesomeIcons:ReactGr,
-  IonIcons:IonIcons
+  LineAwesomeIcons:ReactLia,
+  IonIcons:IonIcons,
+  SimpleLineIcons:ReactSl,
+
 
   // Add more mappings if necessary
 };
@@ -375,10 +377,15 @@ export default function AllIconsPage() {
         const Icon = PayIconsList[name];
         return Icon ? <Icon className="bg-white rounded" style={{ width: 40, height: 40 }} /> : null;
       }
+       case "SimpleLineIcons": {
+        const Icon = ReactSl[name];
+        return Icon ? <Icon size={size} color={color} /> : null;
+      }
+
       case "HealthIcons": {
       const Icon = HealthIcons[name];
       return Icon ? <Icon height={size} width={size} color={color} /> : null;
-    }
+      }
 
        case "FontAwesome6": {
         const Icon = ReactFa6[name];
@@ -676,7 +683,7 @@ export default function AllIconsPage() {
 
            <ScrollArea className="h-[68vh] pr-2">
             <div className="flex flex-col gap-2">
-              {Object.keys(libraries).map((lib) => (
+              {Object.keys(libraries).sort().map((lib) => (
                   <button
                   key={lib}
                   onClick={() => { setActiveLib(lib); setPage(1); setSearch(""); showToast("success",`Selected Library: ${lib}`)  }}
